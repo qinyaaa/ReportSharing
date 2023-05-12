@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!--请务必先引入jquery-->
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <!--此为本led样式的脚本-->
+    <script src="js/ledstyle.js"></script>
+  </head>
+  <style type="text/css">
+    body {
+      margin-left: 200px;
+    }
+  </style>
+
+  <body>
+    <h1>html页面实现led样式的效果预览</h1>
+    <h3>
+      宽为50像素，高为100像素，灯亮部分为5像素,颜色为橘子色，像右边倾斜10度的led效果
+    </h3>
+    <div class="test1"></div>
+    <h3>
+      宽为50像素，高为100像素，灯亮部分为5像素,颜色为红色，像左边倾斜30度的led效果
+    </h3>
+    <div class="test11"></div>
+    <h3>
+      宽为100像素，高为200像素，灯亮部分为10像素,颜色为天空蓝，不倾斜的led效果
+    </h3>
+    <div class="test2"></div>
+  </body>
+  <script type="text/javascript">
+    let led = new LedStyle(50, 100, 5, '.test1', 'orange', '-10')
+    led.setValues('012345678.9')
+
+    let led11 = new LedStyle(50, 100, 5, '.test11', 'red', '30')
+    led11.setValues('-012345678.9')
+
+    let led1 = new LedStyle(100, 200, 10, '.test2', 'skyblue')
+    led1.setValues('1.23')
+  </script>
+</html>
